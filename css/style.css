@@ -30,20 +30,24 @@ body {
 	background: #EEEEEE;
 	border: thin solid #BBBBBB;
 	width: 138px;
-	height: 35px;
-	padding-top: 15px;
+	height: 32px;
+	padding-top: 18px;
 	text-align: center;
 }
 
 #Kontrol > a{
+	background: #FFFFFF;
+	border: thin solid #BBBBBB; 
 	font-family: Arial, Verdana, Helvetica, sans-serif;
 	font-size: 12px;
 	color: black;
 	text-decoration: none;
+	padding: 8px 15px;
 }
 
 #Kontrol > a:hover{
-	text-decoration: underline;
+	background:#EEEEEE;
+	text-decoration: none;
 }
 
 #Print{
@@ -68,6 +72,36 @@ body {
 	height: 35px;
 	padding-top: 15px;
 }
+
+#kontrolMenu{
+	background: #FFFFFF;
+	border: thin solid #BBBBBB;
+	display: none;
+}
+
+#kontrolMenu ul li {
+	float:left;
+	padding: 13px 0;
+}
+
+#kontrolMenu ul li a{
+	background: #FFFFFF;
+	padding:18px;
+	border-left: thin solid #FFFFFF;
+	border-right: thin solid #FFFFFF;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+}
+
+#kontrolMenu ul li a:hover{
+	background: #EEEEEE;
+	border-left: thin solid #BBBBBB;
+	border-right: thin solid #BBBBBB;
+	color:
+}
+
 
 #Content{
 	background: #EEEEEE;
@@ -224,6 +258,10 @@ body {
 
 .sag {
 	float:right;
+}
+
+.border-left-fix{
+	border-left: none !important;
 }
 
 /* DropDown Menü */
