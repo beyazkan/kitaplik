@@ -11,7 +11,7 @@ class Anasayfa extends CI_Controller {
 		$this->load->view('anasayfa_view', $data);
 	}
 	
-	public function kayit(){
+	public function kitap_kayit(){
 		$config['upload_path']		= 'upload';
 		$config['allowed_types']	= 'jpg|gif|png';
 		$config['file_name'] 		= "resim" . date("Y-m-d") . "-" . rand(1, 100);
@@ -21,8 +21,8 @@ class Anasayfa extends CI_Controller {
 		
 		$this->load->library("upload", $config);
 				
-		$kitapAdi	= $this->input->post('kitapAdi', TRUE);
-		$kitapDesc	= $this->input->post('kitapDesc', TRUE);
+		$ad			= $this->input->post('kitapAdi', TRUE);
+		$desc		= $this->input->post('kitapDesc', TRUE);
 		$resimDosya	= $this->input->post('resimDosya', TRUE);
 		$kategori 	= $this->input->post('kategori', TRUE);
 		$yazar		= $this->input->post('yazar', TRUE);
@@ -31,7 +31,7 @@ class Anasayfa extends CI_Controller {
 		$cilt		= $this->input->post('cilt', TRUE);
 		$yayinEvi	= $this->input->post('yayinEvi', TRUE);
 		
-		if(empty($kitapAdi) || empty($kitapDesc) || empty($kategori) || empty($yazar) || empty($basimYili) || empty($sayfaSayisi)
+		if(empty($ad) || empty($desc) || empty($kategori) || empty($yazar) || empty($basimYili) || empty($sayfaSayisi)
 		|| empty($cilt) || empty($yayinEvi))
 		{
 			$data['baslik'] = 'Bos girdi saptandı...';
@@ -44,15 +44,47 @@ class Anasayfa extends CI_Controller {
 			$yukle = $this->upload->do_upload("resimDosya");
 				
 			$upData = $this->upload->data();
-			$degerler = array($kitapAdi, $kitapDesc, $upData["file_name"], $kategori, $yazar, 
+			$degerler = array($ad, $desc, $upData["file_name"], $kategori, $yazar, 
 							$basimYili, $sayfaSayisi, $cilt, $yayinEvi);
 									
 			$this->load->model('anasayfa_model');
-			$query = $this->anasayfa_model->kayitEkle($degerler);
+			$query = $this->anasayfa_model->kitap_kayit($degerler);
 			
 			if($query){			
 				$data['baslik'] = 'Tebrikler, İşlem tamamlandı.';
 				$data['mesaj']	= "Kitap veritabanına başarılı bir şekilde yüklendi... <a href='".base_url()."'>Geri dön</a>";
+			
+				$this->load->view('hata_view', $data);
+			}
+			else{
+				$data['baslik'] = 'HATA: Veritabanına Eklenemedi...';
+				$data['mesaj']	= 'Veritabanına ekleme yapılamadı, lütfen daha sonra tekrar deneyiniz...';
+			
+				$this->load->view('hata_view', $data);
+			}
+		}
+	}
+	
+	public function kategori_kayit(){
+		
+		$ad	= $this->input->post('kategoriAdi', TRUE);
+		
+		if(empty($ad))
+		{
+			$data['baslik'] = 'Bos girdi saptandı...';
+			$data['mesaj']	= 'Lütfen doldurulması gereken alanları doldurunuz...';
+			
+			$this->load->view('hata_view', $data);
+		}
+		else{
+			// Model
+												
+			$this->load->model('anasayfa_model');
+			$query = $this->anasayfa_model->kategori_kayit($ad);
+			
+			if($query){			
+				$data['baslik'] = 'Tebrikler, İşlem tamamlandı.';
+				$data['mesaj']	= "Kategori veritabanına başarılı bir şekilde yüklendi... <a href='".base_url()."'>Geri dön</a>";
 			
 				$this->load->view('hata_view', $data);
 			}
