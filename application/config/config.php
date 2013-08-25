@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/kitaplik';
+$config['base_url']	= 'http://localhost/github/kitaplik';
 
 /*
 |--------------------------------------------------------------------------
