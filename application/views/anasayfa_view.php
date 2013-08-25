@@ -57,7 +57,7 @@
 	</div>
 	
 	<!-- Kontrol Panel Menüsü -->
-	<div class = "grid_12 alt-Bosluk menu-Height" id = "kontrolMenu">
+	<div class = "grid_12 alt-Bosluk" id = "kontrolMenu">
 		<ul>
 			<li><a href = "#" class = "border-left-fix" id = "kitapEkle">Kitap Ekle</a></li>
 			<li><a href = "#" id = "kategoriEkle">Kategori Ekle</a></li>

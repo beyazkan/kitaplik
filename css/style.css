@@ -76,21 +76,24 @@ body {
 #kontrolMenu{
 	background: #FFFFFF;
 	border: thin solid #BBBBBB;
-	display: none;
+	height: 40px;
+	/*display: none;*/
 }
 
 #kontrolMenu ul li {
 	float:left;
-	padding: 13px 0;
+	padding:0px; 
+	margin:0;
 }
 
 #kontrolMenu ul li a{
 	background: #FFFFFF;
-	padding:18px;
+	padding:13px;
 	border-left: thin solid #FFFFFF;
 	border-right: thin solid #FFFFFF;
 	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 11px;
+	line-height: 40px;
 	color: black;
 	text-decoration: none;
 }
