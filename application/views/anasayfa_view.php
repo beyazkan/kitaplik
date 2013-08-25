@@ -23,7 +23,7 @@
 	<!-- Menü -->
 	<div class = "grid_12" id = "Menu">
 		<div class = "grid_2 alt-Bosluk alpha" id = "Kontrol">
-			<a href="#" class = "ekle">Ekle</a> -- <a href="#">Sil</a> (<a href="#" class = "alt-Cizgi">Hepsi</a>)
+			<a href="#" id = "kontrolLink">Kontrol Panel</a>
 		</div>
 		<div class = "grid_7 alt-Bosluk" id = "Print">
 			<div class = "sol solBosluk">
@@ -54,6 +54,16 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	
+	<!-- Kontrol Panel Menüsü -->
+	<div class = "grid_12 alt-Bosluk menu-Height" id = "kontrolMenu">
+		<ul>
+			<li><a href = "#" class = "border-left-fix" id = "kitapEkle">Kitap Ekle</a></li>
+			<li><a href = "#">Kategori Ekle</a></li>
+			<li><a href = "#">Kategoriler</a></li>
+			<li><a href = "#">Ayarlar</a></li>
+		</ul>
 	</div>
 	
 	<!-- Form -->
