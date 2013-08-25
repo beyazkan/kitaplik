@@ -38,7 +38,7 @@
 			</div>
 			
 		</div>
-		<div class = "grid_3 alt-Bosluk omega" id = "Kategori">
+		<div class = "grid_3 alt-Bosluk omega" id = "Kategoriler">
 			<div class = "sol ortaBosluk">
 				Kategori : 
 			</div>
@@ -60,16 +60,36 @@
 	<div class = "grid_12 alt-Bosluk menu-Height" id = "kontrolMenu">
 		<ul>
 			<li><a href = "#" class = "border-left-fix" id = "kitapEkle">Kitap Ekle</a></li>
-			<li><a href = "#">Kategori Ekle</a></li>
+			<li><a href = "#" id = "kategoriEkle">Kategori Ekle</a></li>
 			<li><a href = "#">Kategoriler</a></li>
 			<li><a href = "#">Ayarlar</a></li>
 		</ul>
 	</div>
 	
-	<!-- Form -->
-	<div class = "grid_12 alt-Bosluk" id = "Form">
+	<!-- Kategori Form -->
+	<div class = "grid_12 alt-Bosluk" id = "Kategori">
 	    <div class = "innerContentx">
-			<form action="<?php echo site_url(); ?>/Anasayfa/kayit" method="post" enctype="multipart/form-data" name="form2" id="form2">
+			<form action="<?php echo site_url(); ?>/Anasayfa/kategori_kayit" method="post" name="form3" id="form3" class = "formx">
+				<div class = "genelBilgi sol">
+					<p>
+						<label for="kitapAdi">Kategori Adı* :</label>
+						<input type="text" name="kitapAdi" id="kitapAdi" />
+					</p>			
+				</div>
+				<div class = "both"></div>
+				<div class = "form-Active">
+					<input type="submit" name="button" id="button" value="Kaydet" />
+					<a href="#" class = "iptal">İptal</a>
+				</div>
+				
+			</form>
+	    </div>
+	</div>
+	
+	<!-- Form -->
+	<div class = "grid_12 alt-Bosluk" id = "Kitap">
+	    <div class = "innerContentx">
+			<form action="<?php echo site_url(); ?>/Anasayfa/kayit" method="post" enctype="multipart/form-data" name="form2" id="form2" class = "formx">
 				<div class = "genelBilgi sol">
 					<p>
 						<label for="kitapAdi">Kitap Adı* :</label>

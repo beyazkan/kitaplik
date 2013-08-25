@@ -29,8 +29,12 @@ this.resimonizleme = function(){
 
 // Sayfa hazır olduğunda fonksiyonları yükle...
 $(document).ready(function(){
-	$('#kitapEkle,.iptal').click(function () {
-		$('#Form').toggle("slow");
+	$('#kitapEkle,#Kitap .iptal').click(function () {
+		$('#Kitap').toggle("slow");
+	});
+	
+	$('#kategoriEkle, #Kategori .iptal').click(function () {
+		$('#Kategori').toggle("slow");
 	});
 	
 	$('#kontrolLink').click(function () {
