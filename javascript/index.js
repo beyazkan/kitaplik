@@ -1,3 +1,4 @@
+// Resim Önizleme Fonksiyonu...
 this.resimonizleme = function(){
     /* Düzenleme */
         xOffset = 10;
@@ -26,9 +27,14 @@ this.resimonizleme = function(){
     });
 };
 
+// Sayfa hazır olduğunda fonksiyonları yükle...
 $(document).ready(function(){
-	$('.ekle,.iptal').click(function () {
+	$('#kitapEkle,.iptal').click(function () {
 		$('#Form').toggle("slow");
+	});
+	
+	$('#kontrolLink').click(function () {
+		$('#kontrolMenu').toggle("slow");
 	});
 	
 	$('.text-Td').click(function () {
