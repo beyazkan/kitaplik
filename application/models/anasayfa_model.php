@@ -26,7 +26,7 @@
 			return $query->result();
 		}
 		
-		function kayitEkle($degerler){
+		function kitap_kayit($degerler){
 			$kitapAdi	= $this->db->escape_str($degerler[0]);
 			$kitapDesc	= $this->db->escape_str($degerler[1]);
 			$resim		= $this->db->escape_str($degerler[2]);
@@ -50,6 +50,22 @@
 							);
 							
 			$ekle = $this->db->insert('kitaplar', $data);
+			
+			if($ekle){
+				return true;
+			}
+			else{
+				return false;
+			}
+			
+		}
+		
+		function kategori_kayit($ad){
+			$ad			= $this->db->escape_str($ad);
+			
+			$data = array('ad' => $ad);
+							
+			$ekle = $this->db->insert('kategoriler', $data);
 			
 			if($ekle){
 				return true;

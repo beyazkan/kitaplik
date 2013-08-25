@@ -72,13 +72,13 @@
 			<form action="<?php echo site_url(); ?>/Anasayfa/kategori_kayit" method="post" name="form3" id="form3" class = "formx">
 				<div class = "genelBilgi sol">
 					<p>
-						<label for="kitapAdi">Kategori Adı* :</label>
-						<input type="text" name="kitapAdi" id="kitapAdi" />
+						<label for="kategoriAdi">Kategori Adı* :</label>
+						<input type="text" name="kategoriAdi" id="kategoriAdi" />
 					</p>			
 				</div>
 				<div class = "both"></div>
 				<div class = "form-Active">
-					<input type="submit" name="button" id="button" value="Kaydet" />
+					<input type="submit" name="button" id="button" value="Ekle" />
 					<a href="#" class = "iptal">İptal</a>
 				</div>
 				
@@ -89,7 +89,7 @@
 	<!-- Form -->
 	<div class = "grid_12 alt-Bosluk" id = "Kitap">
 	    <div class = "innerContentx">
-			<form action="<?php echo site_url(); ?>/Anasayfa/kayit" method="post" enctype="multipart/form-data" name="form2" id="form2" class = "formx">
+			<form action="<?php echo site_url(); ?>/Anasayfa/kitap_kayit" method="post" enctype="multipart/form-data" name="form2" id="form2" class = "formx">
 				<div class = "genelBilgi sol">
 					<p>
 						<label for="kitapAdi">Kitap Adı* :</label>
@@ -139,7 +139,7 @@
 				</div>
 				<div class = "both"></div>
 				<div class = "form-Active">
-					<input type="submit" name="button" id="button" value="Kaydet" />
+					<input type="submit" name="button" id="button" value="Ekle" />
 					<a href="#" class = "iptal">İptal</a>
 				</div>
 				
