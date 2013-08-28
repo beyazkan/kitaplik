@@ -5,20 +5,20 @@
 <title>Kitap Listesi - Kitaplar</title>
 
 <!-- Css Dosyaları -->
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" href="css/960.css" />
-<link rel="stylesheet" type="text/css" href="css/text.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/reset.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/960.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/text.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css" />
 
 <!-- Javascript Dosyaları -->
-<script src="javascript/jquery-1.10.2.min.js"></script>
-<script src="javascript/index.js"></script>
+<script src="<?php echo base_url(); ?>javascript/jquery-1.10.2.min.js"></script>
+<script src="<?php echo base_url(); ?>javascript/index.js"></script>
 </head>
 
 <body>
 
 <div class = "container_12">
-	<div class = "grid_12" id = "Header"><a href="#">Kitaplar</a></div>
+	<div class = "grid_12" id = "Header"><a href="<?php echo site_url(); ?>">Kitaplar</a></div>
 	
 	<!-- Menü -->
 	<div class = "grid_12" id = "Menu">
@@ -28,13 +28,13 @@
 		<div class = "grid_7 alt-Bosluk" id = "Print">
 			<div class = "sol solBosluk">
 				Çıktı Al : 
-				<a href="#"><img src = "images/printer.png" width = "32px", height = "32px"/></a>
-				<a href="#"><img src = "images/file_extension_doc.png" width = "32px", height = "32px"/></a>
-				<a href="#"><img src = "images/file_extension_xls.png" width = "32px", height = "32px"/></a>
-				<a href="#"><img src = "images/file_extension_pdf.png" width = "32px", height = "32px"/></a>
+				<a href="#"><img src = "<?php echo base_url(); ?>images/printer.png" width = "32px", height = "32px"/></a>
+				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_doc.png" width = "32px", height = "32px"/></a>
+				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_xls.png" width = "32px", height = "32px"/></a>
+				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_pdf.png" width = "32px", height = "32px"/></a>
 			</div>
 			<div class = "sag sagBosluk">
-				Toplam Kitap : 1254
+				Toplam Kitap : <?php echo $toplam ?>
 			</div>
 			
 		</div>
@@ -165,7 +165,7 @@
 					</td>
 					
 					<td class = "text-Td">
-						<a href = "upload/<?php echo $kitap->resimUrl; ?>" rel="popupacil"><img src = "images/photo.png" width = "32px", height = "32px"/></a>
+						<a href = "<?php echo base_url(); ?>upload/<?php echo $kitap->resimUrl; ?>" rel="popupacil"><img src = "<?php echo base_url(); ?>images/photo.png" width = "32px", height = "32px"/></a>
 						<?php echo $kitap->adi; ?>
 					</td>
 				</tr>
@@ -185,14 +185,7 @@
 			</form>
 		</div>
 	</div>
-	<div class = "grid_12 alt-Bosluk menu-Height" id = "Sayfalama">
-	    <a href="#" class = "genis">Geri</a>
-		<a href="#">1</a>
-		<a href="#">2</a>
-		<a href="#">3</a>
-		<a href="#" class = "genis">İleri</a>
-	</div>
-	
+	<?php echo $linkler;?>
 	<div class = "grid_12" id = "Footer">
 	    <p>Bu sitenin tasarımı ve programlaması <b>Beyazkan</b> tarafından yapılmıştır...</p>
 	</div>

@@ -1,14 +1,60 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Anasayfa extends CI_Controller {
-
+	
+	
 	public function index()
 	{
+		// Varsayılan Değişkenler...
+		$perpage  = 5;
+		
+		
 		$this->load->model('anasayfa_model');
 		$data['kategoriler'] 	= $this->anasayfa_model->kategoriler();
-		$data['kitaplar']		= $this->anasayfa_model->kitaplar();
+		$data['kitaplar']		= $this->anasayfa_model->kitaplar($perpage, $this->uri->segment(3,0));
+		$data['toplam']			= $toplam = $this->anasayfa_model->toplam();
 		
-		$this->load->view('anasayfa_view', $data);
+		$data['linkler'] 		= $this-> sayfalama($toplam, $perpage);
+		
+		$this->load->view('anasayfa_view', $data);		
+		
+	}
+	
+	public function sayfalama($toplam, $perpage){
+	
+		// Sayfalama işlemleri
+		$this->load->library('pagination');
+		$config = array(
+            'base_url'          => site_url()."/Anasayfa/index/",
+            'total_rows'        => $toplam,
+            'per_page'          => $perpage,
+            'num_links'         => 1,
+            'page_query_string' => FALSE,
+            'uri_segment'       => 3,
+            'full_tag_open'     => '<div id = "Sayfalama" class="grid_12 alt-Bosluk menu-Height">',
+            'full_tag_close'    => '</div>',
+            'first_link'        => 'İlk Sayfa',
+            'first_tag_open'    => '',
+            'first_tag_close'   => '',
+            'last_link'         => 'Son Sayfa',
+            'last_tag_open'     => '',
+            'last_tag_close'    => '',
+            'next_link'         => 'Sonraki',
+            'next_tag_open'     => '',
+            'next_tag_close'    => '',
+            'prev_link'         => 'Önceki',
+            'prev_tag_open'     => '',
+            'prev_tag_close'    => '',
+            'cur_tag_open'      => '<span class="current">',
+            'cur_tag_close'     => '</span>',
+            'num_tag_open'      => '',
+            'num_tag_close'     => ''
+
+        );
+		
+		$this->pagination->initialize($config);
+		
+		return $this->pagination->create_links();
 	}
 	
 	public function kitap_kayit(){

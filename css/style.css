@@ -77,7 +77,7 @@ body {
 	background: #FFFFFF;
 	border: thin solid #BBBBBB;
 	height: 40px;
-	/*display: none;*/
+	display: none;
 }
 
 #kontrolMenu ul li {
@@ -142,11 +142,21 @@ body {
 	font-size: 12px;
 	color: black;
 	text-decoration: none;
+	margin: 0 3px;
 }
 
 #Sayfalama > a:hover{
 	background: #E2E2E2;
 	border: thin solid #9F9F9F;
+}
+
+.current {
+	background: #E2E2E2;
+	border: thin solid #9F9F9F;
+	padding: 5px 10px;
+	font-family: Calibri, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: black;
 }
 
 #Footer {

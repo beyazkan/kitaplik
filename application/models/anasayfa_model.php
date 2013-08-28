@@ -16,10 +16,11 @@
 			return $query->result();
 		}
 		
-		function kitaplar(){
+		function kitaplar($perpage = 5, $segment = 1){
 			
 			$this->db->select('*');
 			$this->db->from('kitaplar');
+			$this->db->limit($perpage, $segment);
 			
 			$query = $this->db->get();
 			
