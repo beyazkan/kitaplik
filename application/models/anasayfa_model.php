@@ -23,6 +23,7 @@
 			$this->db->limit($perpage, $segment); 
 			if($kategorid)
 				$this->db->where('kategori', $kategorid);
+			
 			$query = $this->db->get();
 			
 			return $query->result();
@@ -106,7 +107,6 @@
 			
 			return $row->id;
 		}
-		
 		
 	}
 ?>

@@ -13,7 +13,7 @@
 				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_doc.png" width = "32px", height = "32px"/></a>
 				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_xls.png" width = "32px", height = "32px"/></a>
 				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_pdf.png" width = "32px", height = "32px"/></a> 
-			</div>
+		</div>
 			<div class = "sag sagBosluk">
 				Toplam Kitap : <?php echo $toplam ?>
 			</div>
