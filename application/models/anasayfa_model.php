@@ -16,12 +16,13 @@
 			return $query->result();
 		}
 		
-		function kitaplar($perpage = 5, $segment = 1){
+		function kitaplar($perpage = 5, $segment = NULL, $kategorid = NULL){ 
 			
 			$this->db->select('*');
 			$this->db->from('kitaplar');
-			$this->db->limit($perpage, $segment);
-			
+			$this->db->limit($perpage, $segment); 
+			if($kategorid)
+				$this->db->where('kategori', $kategorid);
 			$query = $this->db->get();
 			
 			return $query->result();
@@ -77,11 +78,33 @@
 			
 		}
 		
-		function toplam(){
+		function toplam($kategorid = NULL){
+			
+			if($kategorid)
+				$query = $this->db->query("SELECT COUNT(id) AS toplam FROM kitaplar WHERE kategori = '$kategorid'");
+			else
+				$query = $this->db->query("SELECT COUNT(id) AS toplam FROM kitaplar");
+			$result = $query->result();
+			
+			return $result[0]->toplam;
+		}
+		
+		function total_row_kitaplar(){
 			$query = $this->db->query("SELECT COUNT(id) AS toplam FROM kitaplar");
 			$result = $query->result();
 			
 			return $result[0]->toplam;
+		}
+		
+		function kategoriToid($kategori){
+			$this->db->select('*');
+			$this->db->from('kategoriler');
+			$this->db->where('ad', $kategori);
+			$query = $this->db->get();
+			
+			$row = $query->row();
+			
+			return $row->id;
 		}
 		
 		

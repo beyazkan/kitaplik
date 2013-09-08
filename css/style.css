@@ -1,369 +1,369 @@
 /********************************************/
-/* Proje Adı : Kitaplık						*/
-/* Proje Sahibi : Beyazkan					*/
-/* Proje Açıklaması : Kitapçılar için 		*/
-/* listeleme programı						*/
-/* Dosya Adı : Style.css					*/
-/* Yapım Tarihi : 14.08.2013 - Çarşamba		*/
+/* Proje Adı : Kitaplık */
+/* Proje Sahibi : Beyazkan */
+/* Proje Açıklaması : Kitapçılar için */
+/* listeleme programı */
+/* Dosya Adı : Style.css */
+/* Yapım Tarihi : 14.08.2013 - Çarşamba */
 /* Düzenleme Tarih, : 14.08.2013 - Çarşamba */
 /********************************************/
 
 body {
-	background: #ECE7DF;
+background: #ECE7DF;
 }
 #Header{
-	/* background:#FFFFFF; */
-	padding-top: 20px;
-	margin-bottom: 30px;
-	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 55px;
-	font-weight: bold;
+/* background:#FFFFFF; */
+padding-top: 20px;
+margin-bottom: 30px;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 55px;
+font-weight: bold;
 }
 
 #Header a{
-	/* background:#FFFFFF; */
-	color: black;
-	text-decoration:none;
+/* background:#FFFFFF; */
+color: black;
+text-decoration:none;
 }
 
 #Kontrol{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	width: 138px;
-	height: 32px;
-	padding-top: 18px;
-	text-align: center;
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+width: 138px;
+height: 32px;
+padding-top: 18px;
+text-align: center;
 }
 
 #Kontrol > a{
-	background: #FFFFFF;
-	border: thin solid #BBBBBB; 
-	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: black;
-	text-decoration: none;
-	padding: 8px 15px;
+background: #FFFFFF;
+border: thin solid #BBBBBB;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color: black;
+text-decoration: none;
+padding: 8px 15px;
 }
 
 #Kontrol > a:hover{
-	background:#EEEEEE;
-	text-decoration: none;
+background:#EEEEEE;
+text-decoration: none;
 }
 
 #Print{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	width: 538px;
-	height: 40px;
-	padding-top: 10px;
-	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: black;
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+width: 538px;
+height: 40px;
+padding-top: 10px;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color: black;
 }
 
 #Print > .sag{
-	margin-top: 9px;
+margin-top: 9px;
 }
 
 #Kategoriler{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	width: 218px;
-	height: 35px;
-	padding-top: 15px;
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+width: 218px;
+height: 35px;
+padding-top: 15px;
 }
 
 #kontrolMenu{
-	background: #FFFFFF;
-	border: thin solid #BBBBBB;
-	height: 40px;
-	display: none;
+background: #FFFFFF;
+border: thin solid #BBBBBB;
+height: 40px;
+display: none;
 }
 
 #kontrolMenu ul li {
-	float:left;
-	padding:0px; 
-	margin:0;
+float:left;
+padding:0px;
+margin:0;
 }
 
 #kontrolMenu ul li a{
-	background: #FFFFFF;
-	padding:13px;
-	border-left: thin solid #FFFFFF;
-	border-right: thin solid #FFFFFF;
-	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 11px;
-	line-height: 40px;
-	color: black;
-	text-decoration: none;
+background: #FFFFFF;
+padding:13px;
+border-left: thin solid #FFFFFF;
+border-right: thin solid #FFFFFF;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 11px;
+line-height: 40px;
+color: black;
+text-decoration: none;
 }
 
 #kontrolMenu ul li a:hover{
-	background: #EEEEEE;
-	border-left: thin solid #BBBBBB;
-	border-right: thin solid #BBBBBB;
-	color:
+background: #EEEEEE;
+border-left: thin solid #BBBBBB;
+border-right: thin solid #BBBBBB;
+color:
 }
 
 
 #Content{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	margin-left:9px; /* border + margin = 10px */ 
-	margin-right:9px; /* border + margin = 10px */
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+margin-left:9px; /* border + margin = 10px */
+margin-right:9px; /* border + margin = 10px */
 }
 
 #Kitap{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	margin-left:9px; /* border + margin = 10px */ 
-	margin-right:9px; /* border + margin = 10px */
-	display: none
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+margin-left:9px; /* border + margin = 10px */
+margin-right:9px; /* border + margin = 10px */
+display: none
 }
 
 #Kategori{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	margin-left:9px; /* border + margin = 10px */ 
-	margin-right:9px; /* border + margin = 10px */
-	display: none;
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+margin-left:9px; /* border + margin = 10px */
+margin-right:9px; /* border + margin = 10px */
+display: none;
 }
 
 #Sayfalama{
-	margin-top: 5px;
-	text-align: center;
+margin-top: 5px;
+text-align: center;
 }
 
 #Sayfalama > a{
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	padding: 5px 10px;
-	font-family: Calibri, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: black;
-	text-decoration: none;
-	margin: 0 3px;
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+padding: 5px 10px;
+font-family: Calibri, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color: black;
+text-decoration: none;
+margin: 0 3px;
 }
 
 #Sayfalama > a:hover{
-	background: #E2E2E2;
-	border: thin solid #9F9F9F;
+background: #E2E2E2;
+border: thin solid #9F9F9F;
 }
 
 .current {
-	background: #E2E2E2;
-	border: thin solid #9F9F9F;
-	padding: 5px 10px;
-	font-family: Calibri, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: black;
+background: #E2E2E2;
+border: thin solid #9F9F9F;
+padding: 5px 10px;
+font-family: Calibri, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color: black;
 }
 
 #Footer {
-	height: 45px;
-	background: #EEEEEE;
-	border: thin solid #BBBBBB;
-	padding-top: 30px;
-	font-family: Calibri, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	text-align: center;
-	
+height: 45px;
+background: #EEEEEE;
+border: thin solid #BBBBBB;
+padding-top: 30px;
+font-family: Calibri, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+text-align: center;
+
 }
 
 #Listeleme td{
-	border-bottom: thin #BBBBBB solid;
+border-bottom: thin #BBBBBB solid;
 }
 
 #Listeleme tr:hover{
-	background-color: #EEEEEE;
+background-color: #EEEEEE;
 }
 
 #Listeleme .koyu-tr{
-	background-color: #F2F2F2;
+background-color: #F2F2F2;
 }
 
 #onizleme{
-	position:absolute;
-	border:2px solid #333;
-	background:#ccc;
-	padding:5px;
-	display:none;
-	color:#333;
-	-moz-border-radius:5px;
-	border-radius:5px;
+position:absolute;
+border:2px solid #333;
+background:#ccc;
+padding:5px;
+display:none;
+color:#333;
+-moz-border-radius:5px;
+border-radius:5px;
 }
 
 .aciklama-tr {
-	display: none;
+display: none;
 }
 
 #Listeleme .aciklama-tr div{
-	margin-top:10px;
-	margin-right: 30px;
+margin-top:10px;
+margin-right: 30px;
 }
 .checkbox-Td {
-	border-right: thin #BBBBBB solid;
+border-right: thin #BBBBBB solid;
 
-	padding : 8px 15px;
+padding : 8px 15px;
 }
 
 .text-Td {
-	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color : #525261;
-	padding : 2px 10px;
-	width: 900px;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color : #525261;
+padding : 2px 10px;
+width: 900px;
 }
 
 .miniText {
-	font-family: Calibri, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
+font-family: Calibri, Verdana, Helvetica, sans-serif;
+font-size: 12px;
 }
 
 .innerContent {
-	background: #F8F8F8;
-	border: thin solid #BBBBBB;
-	border-bottom-style: none;
-	margin: 10px;
+background: #F8F8F8;
+border: thin solid #BBBBBB;
+border-bottom-style: none;
+margin: 10px;
 }
 
 .innerContentx {
-	background: #F8F8F8;
-	border: thin solid #BBBBBB;
-	margin: 10px;
-	padding: 10px;
+background: #F8F8F8;
+border: thin solid #BBBBBB;
+margin: 10px;
+padding: 10px;
 }
 
 
 /* Sık kullanılan css özellikleri */
 .menu-Height {
-	height: 50px;
+height: 50px;
 }
 
 .example-Height {
-	height: 600px;
+height: 600px;
 }
 
 .example-Heightx{
-	height: 560px;
-	
+height: 560px;
+
 }
 
 .alt-Bosluk {
-	margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .solBosluk {
-	margin-left: 10px;
+margin-left: 10px;
 }
 
 .sagBosluk {
-	margin-right: 10px;
+margin-right: 10px;
 }
 
 .ortaBosluk {
-	margin: 0 10px;
+margin: 0 10px;
 }
 
 .genis {
-	padding: 5px 20px !important;
+padding: 5px 20px !important;
 }
 
 .alt-Cizgi{
-	text-decoration: underline !important;
+text-decoration: underline !important;
 }
 
 .sol{
-	float: left;
+float: left;
 }
 
 .sag {
-	float:right;
+float:right;
 }
 
 .border-left-fix{
-	border-left: none !important;
+border-left: none !important;
 }
 
 /* DropDown Menü */
 
 .dd_menu {
-	background:#FFFFFF; 
-	padding:0px; 
-	margin:0; 
-	list-style-type:none; 
-	height:26px;
+background:#FFFFFF;
+padding:0px;
+margin:0;
+list-style-type:none;
+height:26px;
 }
 .dd_menu li {
-	float:left; 
-	height:26px; 
-	border-right: solid 1px white;
+float:left;
+height:26px;
+border-right: solid 1px white;
 }
 .dd_menu li a {
-	padding: 5px 45px; 
-	display:block; 
-	border: thin solid #BBBBBB; 
-	color:black; 
-	text-decoration:none; 
-	font:12px Calibri, Verdana, Helvetica, sans-serif; 
-	font-weight: bold;
+padding: 5px 45px;
+display:block;
+border: thin solid #BBBBBB;
+color:black;
+text-decoration:none;
+font:12px Calibri, Verdana, Helvetica, sans-serif;
+font-weight: bold;
 }
 .dd_menu li:hover a {
-	text-decoration:underline;
+text-decoration:underline;
 }
 
 .dd_menu ul {
-	position:absolute; 
-	left:-9999px; 
-	top:-9999px; 
-	list-style-type:none;
+position:absolute;
+left:-9999px;
+top:-9999px;
+list-style-type:none;
 }
 .dd_menu li:hover {
-	position:relative; 
-	background:#EEEEEE;
+position:relative;
+background:#EEEEEE;
 }
 .dd_menu li:hover ul {
-	left:0px; 
-	top:27px; 
-	background:lavender; 
-	padding:3px; 
-	border:1px solid grey; 
-	width:130px;
+left:0px;
+top:27px;
+background:lavender;
+padding:3px;
+border:1px solid grey;
+width:130px;
 }
 .dd_menu li:hover ul li {
-	height:18px; 
-	border:none;
+height:18px;
+border:none;
 }
 .dd_menu li:hover ul li a {
-	height:18px; 
-	padding:0px; 
-	display:block; 
-	font-size:11px; 
-	width:128px; 
-	line-height:18px; 
-	text-indent:5px; 
-	color:#444; 
-	background-color:lavender; 
-	text-decoration:none; 
-	border:1px solid transparent;
+height:18px;
+padding:0px;
+display:block;
+font-size:11px;
+width:128px;
+line-height:18px;
+text-indent:5px;
+color:#444;
+background-color:lavender;
+text-decoration:none;
+border:1px solid transparent;
 }
 .dd_menu li:hover ul li a:hover {
-	height:18px; 
-	background:silver; 
-	color:#000; 
-	border:solid 1px #444;
+height:18px;
+background:silver;
+color:#000;
+border:solid 1px #444;
 }
 
 .both{
-	clear:both;
+clear:both;
 }
 
 .genelBilgi{
-	width : 350px;
+width : 350px;
 }
 
 .ayrinti {
-	width : 310px;
+width : 310px;
 }
 
 .formx input{
@@ -375,9 +375,9 @@ body {
 
     /* Gölge*/
     /*box-shadow: inset 2px 2px 3px rgba(0, 0, 0, .15);
-    -moz-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, .15);*/
-	
+-moz-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.15);
+-webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, .15);*/
+
     /*Font style*/
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: #747474;
@@ -393,7 +393,7 @@ body {
 
 .formx textarea {
     /*Border ve Arkaplan*/
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: #747474;
     font-size: 12px;
     font-style: italic;
@@ -401,8 +401,8 @@ body {
     -webkit-border-radius: 6px;
     border: 1px solid #DADADA;
     background: #F9F9F9;
-	width: 550px;
-	height: 250px;
+width: 550px;
+height: 250px;
 }
 
 .formx label {
@@ -412,31 +412,31 @@ body {
 }
 
 .formx p{
-	margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .resimBilgi{
-	margin-top: 20px;
-	padding: 5px;
-	border: thin solid #DADADA;
-	height: 310px;
+margin-top: 20px;
+padding: 5px;
+border: thin solid #DADADA;
+height: 310px;
 }
 
 .resimBilgi .sag{
-	width : 310px;
+width : 310px;
 }
 
 .form-Active{
-	margin-top: 30px;
-	text-align:right;
+margin-top: 30px;
+text-align:right;
 }
 
 .form-Active input{
-	margin-right: 30px;
+margin-right: 30px;
 }
 
 .form-Active a{
-	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: black;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color: black;
 }

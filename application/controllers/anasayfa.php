@@ -1,60 +1,54 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Anasayfa extends CI_Controller {
+	private $perpage = 5;
 	
-	
-	public function index()
-	{
-		// Varsayılan Değişkenler...
-		$perpage  = 5;
-		
-		
-		$this->load->model('anasayfa_model');
-		$data['kategoriler'] 	= $this->anasayfa_model->kategoriler();
-		$data['kitaplar']		= $this->anasayfa_model->kitaplar($perpage, $this->uri->segment(3,0));
-		$data['toplam']			= $toplam = $this->anasayfa_model->toplam();
-		
-		$data['linkler'] 		= $this-> sayfalama($toplam, $perpage);
-		
-		$this->load->view('anasayfa_view', $data);		
-		
+	public function index(){
+		$this->home();
 	}
 	
-	public function sayfalama($toplam, $perpage){
+	public function home(){
+		$this->load->model('anasayfa_model');
+		$data['kategoriler'] = $this->anasayfa_model->kategoriler();
+		$data['kitaplar']    = $this->anasayfa_model->kitaplar($this->perpage); 
+		$data['toplam']      = $this->anasayfa_model->total_row_kitaplar(); 
+		$toplam 			 = $this->anasayfa_model->toplam(); 
+		
+		$data['linkler']     = $this->sayfalama($toplam, $this->perpage); 
+		
+		$this->load->view('header_view');
+		$this->load->view('content_view', $data);
+		$this->load->view('footer_view');
+	}
 	
-		// Sayfalama işlemleri
-		$this->load->library('pagination');
-		$config = array(
-            'base_url'          => site_url()."/Anasayfa/index/",
-            'total_rows'        => $toplam,
-            'per_page'          => $perpage,
-            'num_links'         => 1,
-            'page_query_string' => FALSE,
-            'uri_segment'       => 3,
-            'full_tag_open'     => '<div id = "Sayfalama" class="grid_12 alt-Bosluk menu-Height">',
-            'full_tag_close'    => '</div>',
-            'first_link'        => 'İlk Sayfa',
-            'first_tag_open'    => '',
-            'first_tag_close'   => '',
-            'last_link'         => 'Son Sayfa',
-            'last_tag_open'     => '',
-            'last_tag_close'    => '',
-            'next_link'         => 'Sonraki',
-            'next_tag_open'     => '',
-            'next_tag_close'    => '',
-            'prev_link'         => 'Önceki',
-            'prev_tag_open'     => '',
-            'prev_tag_close'    => '',
-            'cur_tag_open'      => '<span class="current">',
-            'cur_tag_close'     => '</span>',
-            'num_tag_open'      => '',
-            'num_tag_close'     => ''
-
-        );
+	public function listeleme($sayfa = NULL){
+		$this->load->model('anasayfa_model');
+		$data['kategoriler'] = $this->anasayfa_model->kategoriler();
+		$data['kitaplar']    = $this->anasayfa_model->kitaplar($this->perpage, $sayfa); 
+		$data['toplam']      = $this->anasayfa_model->total_row_kitaplar(); 
+		$toplam 			 = $this->anasayfa_model->toplam(); 
 		
-		$this->pagination->initialize($config);
+		$data['linkler']     = $this->sayfalama($toplam, $this->perpage); 
 		
-		return $this->pagination->create_links();
+		$this->load->view('header_view');
+		$this->load->view('content_view', $data);
+		$this->load->view('footer_view');
+	}
+	
+	public function kategori($kategori = NULL, $sayfa = NULL){
+	
+		$this->load->model('anasayfa_model');
+		$data['kategoriler'] = $this->anasayfa_model->kategoriler();
+		$kategorid 			 = $this->anasayfa_model->kategoriToid($kategori); 
+		$data['kitaplar']    = $this->anasayfa_model->kitaplar($this->perpage, $sayfa, $kategorid); 
+		$data['toplam']      = $this->anasayfa_model->total_row_kitaplar(); 
+		$toplam 			 = $this->anasayfa_model->toplam($kategorid); 
+		
+		$data['linkler']     = $this->sayfalama($toplam, $this->perpage, $kategori); 
+		
+		$this->load->view('header_view');
+		$this->load->view('content_view', $data);
+		$this->load->view('footer_view');
 	}
 	
 	public function kitap_kayit(){
@@ -142,4 +136,51 @@ class Anasayfa extends CI_Controller {
 			}
 		}
 	}
+	
+	public function sayfalama($toplam, $perpage, $kategori = NULL){
+			if(!$kategori){
+				$link_url = site_url()."/Sayfa";
+				$segment = 2;
+			}
+			else{
+				$link_url = site_url()."/Kategori/".$kategori;
+				$segment = 3;
+			}
+			
+			// Sayfalama işlemleri
+			$this->load->library('pagination');
+			$config = array(
+            'base_url' => $link_url,
+            'total_rows' => $toplam,
+            'per_page' => $perpage,
+            'num_links' => 1,
+            'page_query_string' => FALSE,
+            'uri_segment' => $segment,
+            'full_tag_open' => '<div id = "Sayfalama" class="grid_12 alt-Bosluk menu-Height">',
+            'full_tag_close' => '</div>',
+            'first_link' => 'İlk Sayfa',
+            'first_tag_open' => '',
+            'first_tag_close' => '',
+            'last_link' => 'Son Sayfa',
+            'last_tag_open' => '',
+            'last_tag_close' => '',
+            'next_link' => 'Sonraki',
+            'next_tag_open' => '',
+            'next_tag_close' => '',
+            'prev_link' => 'Önceki',
+            'prev_tag_open' => '',
+            'prev_tag_close' => '',
+            'cur_tag_open' => '<span class="current">',
+            'cur_tag_close' => '</span>',
+            'num_tag_open' => '',
+            'num_tag_close' => ''
+
+        );
+
+		$this->pagination->initialize($config);
+
+		return $this->pagination->create_links();
+	}
 }
+
+

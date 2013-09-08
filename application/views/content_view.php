@@ -1,24 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kitap Listesi - Kitaplar</title>
-
-<!-- Css Dosyaları -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/reset.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/960.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/text.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css" />
-
-<!-- Javascript Dosyaları -->
-<script src="<?php echo base_url(); ?>javascript/jquery-1.10.2.min.js"></script>
-<script src="<?php echo base_url(); ?>javascript/index.js"></script>
-</head>
-
-<body>
-
 <div class = "container_12">
-	<div class = "grid_12" id = "Header"><a href="<?php echo site_url(); ?>">Kitaplar</a></div>
+	<div class = "grid_12" id = "Header"><a href="<?php echo site_url(); ?>">Kitaplar</a></div> 
 	
 	<!-- Menü -->
 	<div class = "grid_12" id = "Menu">
@@ -31,7 +12,7 @@
 				<a href="#"><img src = "<?php echo base_url(); ?>images/printer.png" width = "32px", height = "32px"/></a>
 				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_doc.png" width = "32px", height = "32px"/></a>
 				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_xls.png" width = "32px", height = "32px"/></a>
-				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_pdf.png" width = "32px", height = "32px"/></a>
+				<a href="#"><img src = "<?php echo base_url(); ?>images/file_extension_pdf.png" width = "32px", height = "32px"/></a> 
 			</div>
 			<div class = "sag sagBosluk">
 				Toplam Kitap : <?php echo $toplam ?>
@@ -47,7 +28,7 @@
 				<li><a href='#nogo'>Hepsi</a>
 				 <ul>
 				 <?php foreach($kategoriler AS $kategori){ ?>
-				 <li><a href='#nogo1'><?php echo $kategori->ad; ?></a></li>
+				 <li><a href='<?php echo base_url()."Kategori/".$kategori->ad; ?>'><?php echo $kategori->ad; ?></a></li>
 				 <?php } ?>
 				 </ul>
 				</li>
@@ -69,7 +50,7 @@
 	<!-- Kategori Form -->
 	<div class = "grid_12 alt-Bosluk" id = "Kategori">
 	    <div class = "innerContentx">
-			<form action="<?php echo site_url(); ?>/Anasayfa/kategori_kayit" method="post" name="form3" id="form3" class = "formx">
+			<form action="<?php echo site_url(); ?>Anasayfa/kategori_kayit" method="post" name="form3" id="form3" class = "formx">
 				<div class = "genelBilgi sol">
 					<p>
 						<label for="kategoriAdi">Kategori Adı* :</label>
@@ -89,7 +70,7 @@
 	<!-- Form -->
 	<div class = "grid_12 alt-Bosluk" id = "Kitap">
 	    <div class = "innerContentx">
-			<form action="<?php echo site_url(); ?>/Anasayfa/kitap_kayit" method="post" enctype="multipart/form-data" name="form2" id="form2" class = "formx">
+			<form action="<?php echo site_url(); ?>Anasayfa/kitap_kayit" method="post" enctype="multipart/form-data" name="form2" id="form2" class = "formx">
 				<div class = "genelBilgi sol">
 					<p>
 						<label for="kitapAdi">Kitap Adı* :</label>
@@ -165,7 +146,7 @@
 					</td>
 					
 					<td class = "text-Td">
-						<a href = "<?php echo base_url(); ?>upload/<?php echo $kitap->resimUrl; ?>" rel="popupacil"><img src = "<?php echo base_url(); ?>images/photo.png" width = "32px", height = "32px"/></a>
+						<a href = "<?php echo base_url(); ?>upload/<?php echo $kitap->resimUrl; ?>" rel="popupacil"><img src = "<?php echo base_url(); ?>images/photo.png" width = "32px", height = "32px"/></a> 
 						<?php echo $kitap->adi; ?>
 					</td>
 				</tr>
@@ -185,11 +166,4 @@
 			</form>
 		</div>
 	</div>
-	<?php echo $linkler;?>
-	<div class = "grid_12" id = "Footer">
-	    <p>Bu sitenin tasarımı ve programlaması <b>Beyazkan</b> tarafından yapılmıştır...</p>
-	</div>
-</div>
-
-</body>
-</html>
+	<?php echo $linkler;?> 

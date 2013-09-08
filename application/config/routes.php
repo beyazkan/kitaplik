@@ -38,8 +38,13 @@
 |
 */
 
-$route['default_controller'] = "anasayfa";
+$route['default_controller'] = "Anasayfa";
 $route['404_override'] = '';
+
+$route['Sayfa'] = 'Anasayfa/listeleme';
+$route['Sayfa/(:num)'] = 'Anasayfa/listeleme/$1';
+$route['Kategori/([A-Za-z]+)'] = 'Anasayfa/kategori/$1';
+$route['Kategori/([A-Za-z]+)/(:num)'] = 'Anasayfa/kategori/$1/$2';
 
 
 /* End of file routes.php */
